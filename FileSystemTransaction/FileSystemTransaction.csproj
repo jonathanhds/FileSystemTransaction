@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{086F81AC-AA09-48C5-A35E-5771E455E3EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FileSystemTransaction</RootNamespace>
+    <AssemblyName>FileSystemTransaction</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="FileSystemTransaction\FileSystemTransaction.cs" />
+    <Compile Include="FileSystemTransaction\Command\IFileSystemCommand.cs" />
+    <Compile Include="FileSystemTransaction\Command\MoveCommand.cs" />
+    <Compile Include="FileSystemTransaction\Command\CreateCommand.cs" />
+    <Compile Include="FileSystemTransaction\Command\CopyCommand.cs" />
+    <Compile Include="FileSystemTransaction\Command\DeleteCommand.cs" />
+    <Compile Include="FileSystemTransaction\Command\WriteCommand.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="FileSystemTransaction\" />
+    <Folder Include="FileSystemTransaction\Command\" />
+  </ItemGroup>
+</Project>

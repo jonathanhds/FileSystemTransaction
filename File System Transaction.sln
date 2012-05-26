@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemTransaction", "FileSystemTransaction\FileSystemTransaction.csproj", "{086F81AC-AA09-48C5-A35E-5771E455E3EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemTransaction.Test", "FileSystemTransaction.Test\FileSystemTransaction.Test.csproj", "{7599B083-2E31-4099-BA7B-B7F969269461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086F81AC-AA09-48C5-A35E-5771E455E3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086F81AC-AA09-48C5-A35E-5771E455E3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086F81AC-AA09-48C5-A35E-5771E455E3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086F81AC-AA09-48C5-A35E-5771E455E3EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7599B083-2E31-4099-BA7B-B7F969269461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7599B083-2E31-4099-BA7B-B7F969269461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7599B083-2E31-4099-BA7B-B7F969269461}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{7599B083-2E31-4099-BA7B-B7F969269461}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{7599B083-2E31-4099-BA7B-B7F969269461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7599B083-2E31-4099-BA7B-B7F969269461}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = FileSystemTransaction\FileSystemTransaction.csproj
+	EndGlobalSection
+EndGlobal
