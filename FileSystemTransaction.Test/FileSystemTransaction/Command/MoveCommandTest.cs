@@ -19,6 +19,15 @@ namespace FileSystemTransaction.Test
 		}
 		
 		[Test]
+		[ExpectedException(typeof(FileNotFoundException))]
+		public void ShouldThrowExceptionIfFileDoesntExist ()
+		{
+			// When
+			var command = new MoveCommand (@"c:\temp\foo.txt", DestinyFilePath);
+			command.Execute ();
+		}
+		
+		[Test]
 		public void ShouldMoveFile ()
 		{
 			// Given
