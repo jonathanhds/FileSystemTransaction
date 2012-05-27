@@ -14,6 +14,7 @@ namespace FileSystemTransaction
 		
 		public void Execute ()
 		{
+			Directory.CreateDirectory (Path.GetDirectoryName (FilePath));
 			File.Create (FilePath).Close();
 		}
 		

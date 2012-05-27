@@ -8,7 +8,7 @@ namespace FileSystemTransaction.Test
 	[TestFixture]
 	public class CreateCommandTest
 	{
-		private readonly string FilePath = @"c:\temp\foo.txt";
+		private readonly string FilePath = @"c:\temp\test_sample\foo.txt";
 		
 		[Test]
 		public void ShouldCreateFile()
