@@ -16,6 +16,9 @@ namespace FileSystemTransaction
 		
 		public void Execute ()
 		{
+			if (!File.Exists(FileToWrite))
+				throw new FileNotFoundException ();
+				
 			File.AppendAllText (FileToWrite, Content);
 		}
 		

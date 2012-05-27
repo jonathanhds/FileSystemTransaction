@@ -33,6 +33,18 @@ namespace FileSystemTransaction.Test
 		}
 		
 		[Test]
+		[ExpectedException(typeof(FileNotFoundException))]
+		public void ShouldThrowExceptionIfFileDoesntExist ()
+		{
+			// Given
+			File.Delete (FileToWrite);
+			
+			// When
+			var command = new WriteCommand (FileToWrite, "foo bar");
+			command.Execute ();
+		}
+		
+		[Test]
 		public void ShouldRollbackFileWrite ()
 		{
 			// Given
