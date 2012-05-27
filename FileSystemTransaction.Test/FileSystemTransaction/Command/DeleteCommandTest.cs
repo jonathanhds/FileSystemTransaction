@@ -18,6 +18,15 @@ namespace FileSystemTransaction.Test
 		}
 		
 		[Test]
+		[ExpectedException(typeof(FileNotFoundException))]
+		public void ShouldThrowExceptionIfFileDoesntExist ()
+		{
+			// When
+			var command = new DeleteCommand (@"c:\temp\abc.txt");
+			command.Execute ();
+		}
+		
+		[Test]
 		public void ShouldDeleteFile ()
 		{
 			// Given
