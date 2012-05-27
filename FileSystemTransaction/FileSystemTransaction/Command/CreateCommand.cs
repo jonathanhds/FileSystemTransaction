@@ -14,6 +14,9 @@ namespace FileSystemTransaction
 		
 		public void Execute ()
 		{
+			if (File.Exists (FilePath))
+				throw new FileAlreadyExistsException ();
+			
 			Directory.CreateDirectory (Path.GetDirectoryName (FilePath));
 			File.Create (FilePath).Close();
 		}
@@ -25,4 +28,3 @@ namespace FileSystemTransaction
 		
 	}
 }
-

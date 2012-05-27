@@ -11,6 +11,18 @@ namespace FileSystemTransaction.Test
 		private readonly string FilePath = @"c:\temp\test_sample\foo.txt";
 		
 		[Test]
+		[ExpectedException(typeof(FileAlreadyExistsException))]
+		public void ShouldThrowExceptionIFileAlreadyExists ()
+		{
+			// Given
+			File.Create (FilePath).Close ();
+			
+			// When
+			var command = new CreateCommand (FilePath);
+			command.Execute ();
+		}
+		
+		[Test]
 		public void ShouldCreateFile()
 		{
 			// When
