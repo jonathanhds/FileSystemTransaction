@@ -22,16 +22,17 @@ namespace FileSystemTransaction.Test
 		public void ShouldMoveFile ()
 		{
 			// Given
-			Assert.IsFalse (File.Exists (DestinyFilePath));
 			Assert.IsTrue (File.Exists (OriginFilePath));
+			Assert.IsFalse (File.Exists (DestinyFilePath));
 			
 			// When
-			var command = new MoveCommand(OriginFilePath, DestinyFilePath);
-			command.Execute();
+			var command = new MoveCommand (OriginFilePath, DestinyFilePath);
+			command.Execute ();
 			
 			// Then
-			Assert.IsTrue (File.Exists (DestinyFilePath));
 			Assert.IsFalse (File.Exists (OriginFilePath));
+			Assert.IsTrue (Directory.Exists (Path.GetDirectoryName (DestinyFilePath)));
+			Assert.IsTrue (File.Exists (DestinyFilePath));
 		}
 		
 		[Test]
@@ -45,8 +46,8 @@ namespace FileSystemTransaction.Test
 			command.Rollback ();
 			
 			// Then
-			Assert.IsFalse (File.Exists (DestinyFilePath));
 			Assert.IsTrue (File.Exists (OriginFilePath));
+			Assert.IsFalse (File.Exists (DestinyFilePath));
 		}
 		
 		[TearDown]

@@ -47,6 +47,7 @@
     <Compile Include="FileSystemTransaction\Command\CopyCommandTest.cs" />
     <Compile Include="FileSystemTransaction\Command\DeleteCommandTest.cs" />
     <Compile Include="FileSystemTransaction\Command\WriteCommandTest.cs" />
+    <Compile Include="FileSystemTransaction\FileSystemTransactionTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
