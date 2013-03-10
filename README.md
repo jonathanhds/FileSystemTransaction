@@ -8,14 +8,14 @@ Usage
 --------------
 
 Commit:
-```
+```csharp
 var fileTransaction = new FileSystemTransaction();
 fileTransaction.Create("C:/test"); // Create new file/path
 fileTransaction.Commit(); // Commit changes
 ```
 
 Rollback:
-```
+```csharp
 var fileTransaction = new FileSystemTransaction();
 fileTransaction.Create("C:/test"); // Create new file/path
 fileTransaction.Write("C:/test/foo.txt", "Hello World"); // Write to file
